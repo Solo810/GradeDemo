@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="grade">
+  <name>grade</name>
+  <uuid>ab37d20a-3762-4a5a-baf2-b76559ea9cc2</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e7e64b88-fe5c-474d-a028-af2e0c2e9a69"/>
+  <targetRuleProject href="../../grade#f03e0f71-d2db-438d-8b8a-0bbc0a22bf7a"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

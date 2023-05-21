@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>e7e64b88-fe5c-474d-a028-af2e0c2e9a69</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="job_title">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="job_title"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="job_title" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="getGrade">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="job_title"/>
+                <input bomType="java.lang.String" collection="false" name="department"/>
+                <output bomType="java.lang.String" collection="false" name="getGrade"/>
+                <rule defaultRule="false" href="node_1/Grade.dmt" kind="DecisionTable" name="Grade"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="getGrade" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="department">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="department"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="department" typeRef="java.lang.String"/>
+    </inputData>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>
